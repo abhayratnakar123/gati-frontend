@@ -1,9 +1,11 @@
 import Image from "next/image";
+import HomePage from "@/components/homePage"
 
 export default function Home() {
   return (
-    <div className="text-5xl bg-orange-200 text-center">
-      Hy From Gati-Frontend
+    <div className="">
+   <HomePage/>
+
     </div>
   );
 }
