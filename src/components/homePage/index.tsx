@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Main } from "../main";
 
-const Home=()=> {
+const Home = () => {
   return (
     <div>
-      Welcome to gati home page
+      <Main />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
