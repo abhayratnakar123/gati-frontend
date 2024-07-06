@@ -1,10 +1,9 @@
 import React from 'react'
-import Header from '../header'
 
 const Home=()=> {
   return (
     <div>
-      <Header/>
+      Welcome to gati home page
     </div>
   )
 }

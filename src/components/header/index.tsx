@@ -1,71 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <header className="bg-[#2b2c68]">
@@ -74,14 +19,10 @@ export default function Example() {
         className="mx-auto flex  items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              alt=""
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
-          </a>
+            <img alt="" src="/images/gati-logo.png" className="h-8 w-auto" />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -94,28 +35,62 @@ export default function Example() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-         
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <Link
+            href="/"
+            className={`link    ${
+              pathname === "/" ? " active" : ""
+            }`}
+          >
             Home
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="/about-us"
+            className={`link    ${
+              pathname === "/about-us" ? " active" : ""
+            }`}
+          >
             About us
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="/products"
+            className={`link    ${
+              pathname === "/products" ? " active" : ""
+            }`}
+          >
             Products
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="/explore"
+            className={`link    ${
+              pathname === "/explore" ? " active" : ""
+            }`}
+          >
             Explore
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="/navigation"
+            className={`link    ${
+              pathname === "/navigation" ? " active" : ""
+            }`}
+          >
             Navigation
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="/contact-us"
+            className={`link    ${
+              pathname === "/contact-us" ? " active" : ""
+            }`}
+          >
             Contact us
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="#"
+            className={`link    ${
+              pathname === "/auth/login" ? " active" : ""
+            }`}
+          >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -126,14 +101,10 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#2b2c68] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
-            </a>
+              <img alt="" src="/images/gati-logo.png" className="h-8 w-auto" />
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -144,52 +115,52 @@ export default function Example() {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+            <div className="-my-6 divide-y ">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/about-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   About us
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/products"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   Products
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/explore"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   Explore
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/navigation"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   Navigation
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/contact-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
                 >
                   Contact us
-                </a>
+                </Link>
               </div>
-              <div className="py-6">
-                <a
+              <div className="py-6 mt-2 mt-color-white">
+                <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68]"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68] border-top-white"
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
