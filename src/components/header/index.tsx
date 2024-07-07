@@ -13,7 +13,10 @@ export default function Example() {
   console.log(pathname);
 
   return (
-    <header className="">
+    <header  style={{
+      background:
+        "linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(15,15,111,1) 76%, rgba(50,0,255,1) 100%)",
+    }}>
       <nav
         aria-label="Global"
         className="mx-auto flex  items-center justify-between p-6 lg:px-8"
@@ -49,7 +52,7 @@ export default function Example() {
               pathname === "/about-us" ? " active" : ""
             }`}
           >
-            About us
+            AboutUs
           </Link>
           <Link
             href="/products"

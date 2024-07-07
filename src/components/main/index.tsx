@@ -1,10 +1,13 @@
 import React from "react";
-
 export const Main = () => {
   return (
-    <div className="text-white h-full  p-32 flex lg:flex-row items-center justify-center md:flex-col sm:flex-col">
+    <div className="text-white h-full  p-32 flex lg:flex-row items-center justify-center md:flex-col sm:flex-col"
+    style={{
+      background:
+        "linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(15,15,111,1) 76%, rgba(50,0,255,1) 100%)",
+    }}
+    >
       <div className="flex flex-col">
-
       <style>
         {`
           @keyframes fadeInUp {
@@ -42,9 +45,7 @@ export const Main = () => {
         </button>
       </div>
       </div>
-
       <div className="w-full">
-
         <img
           src="/images/banner-bg.png"
           alt="Banner Background"
