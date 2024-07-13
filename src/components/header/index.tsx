@@ -7,16 +7,33 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Example() {
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   console.log(pathname);
 
   return (
-    <header  style={{
-      background:
-        "linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(15,15,111,1) 76%, rgba(50,0,255,1) 100%)",
-    }}>
+    // <header
+    //   style={{
+    //     backgroundColor: "#09223f",
+    //     margin: "0 50px",
+    //     borderRadius: "20px",
+    //     // padding:"10px",
+    //     marginTop: "20px",
+    //     position: "fixed",
+    //     top: 15,
+    //     left: 0,
+    //     right: 0,
+    //     zIndex: 999,
+    //     display: mobileMenuOpen ? "none" : "",
+    //   }}
+    // >
+    <header className={`bg-[#09223f] lg:mx-[150px]  sm:mx-[10px] sm:mt-[10px] rounded-[20px] mt-[20px] fixed top-[15px] left-0 right-0 z-[999] ${mobileMenuOpen ? 'hidden' : ''}`}>
+    {/* <!-- Content here --> */}
+  {/* </header> */}
+  
+
+       {/* <header className={`bg-[#09223f] mx-[150px] sm:mx-[50px] rounded-[20px] mt-[20px] fixed top-[15px] left-0 right-0 z-[999] ${mobileMenuOpen ? 'hidden' : ''}`}> */}
       <nav
         aria-label="Global"
         className="mx-auto flex  items-center justify-between p-6 lg:px-8"
@@ -40,57 +57,43 @@ export default function Example() {
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             href="/"
-            className={`link    ${
-              pathname === "/" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/" ? " active" : ""}`}
           >
             Home
           </Link>
           <Link
             href="/about-us"
-            className={`link    ${
-              pathname === "/about-us" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/about-us" ? " active" : ""}`}
           >
             AboutUs
           </Link>
           <Link
             href="/products"
-            className={`link    ${
-              pathname === "/products" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/products" ? " active" : ""}`}
           >
             Products
           </Link>
           <Link
             href="/explore"
-            className={`link    ${
-              pathname === "/explore" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/explore" ? " active" : ""}`}
           >
             Explore
           </Link>
           <Link
             href="/navigation"
-            className={`link    ${
-              pathname === "/navigation" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/navigation" ? " active" : ""}`}
           >
             Navigation
           </Link>
           <Link
             href="/contact-us"
-            className={`link    ${
-              pathname === "/contact-us" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/contact-us" ? " active" : ""}`}
           >
             Contact us
           </Link>
           <Link
             href="#"
-            className={`link    ${
-              pathname === "/auth/login" ? " active" : ""
-            }`}
+            className={`link    ${pathname === "/auth/login" ? " active" : ""}`}
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>

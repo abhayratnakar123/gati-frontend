@@ -2,29 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(15, 15, 111, 1) 76%,
+    rgba(30, 9, 116, 1) 100%
+  );
+}
 .link {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.5;
-    transition: color 0.3s ease;
-  }
-  
-  .link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease;
-  }
-  
-  .link:hover::after,
-  .link.active::after {
-    width: 100%;
-  }
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after,
+.link.active::after {
+  width: 100%;
+}
+
