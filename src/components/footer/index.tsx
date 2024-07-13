@@ -161,7 +161,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-span-12 lg:col-span-4">
+            {/* <div className="col-span-12 lg:col-span-4">
               <div className="mb-6 mt-3 text-lg font-semibold text-white">
                 Reach out to us
               </div>
@@ -224,7 +224,7 @@ function Footer() {
                   Submit
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
