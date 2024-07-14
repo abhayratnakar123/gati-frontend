@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(15, 15, 111, 1) 76%,
     rgba(30, 9, 116, 1) 100%
-  );
+  ); */
+  background-color: black;
 }
 .link {
   position: relative;
@@ -35,4 +36,24 @@ body {
 .link.active::after {
   width: 100%;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.hover\:fadeInUp:hover {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+
 
