@@ -17,11 +17,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        'loop-scroll': 'loop-scroll 50s linear infinite',
+        "loop-scroll": "loop-scroll 50s linear infinite",
         "fade-out-down": "fade-out-down linear forwards",
         "make-it-bigger": "make-it-bigger linear forwards",
-        "typing": 'typing 4s steps(40, end) 1s 1 normal both, blink .75s step-end infinite',
-        "fadeInUp": 'fadeInUp 0.5s ease-out forwards',
+        typing:
+          "typing 4s steps(40, end) 1s 1 normal both, blink .75s step-end infinite",
+        fadeInUp: "fadeInUp 0.5s ease-out forwards",
       },
       keyframes: {
         "fade-out-down": {
@@ -46,42 +47,40 @@ const config: Config = {
           },
           "100%": {
             transform: "translateY(0%) scale(0.5)",
-            opacity: 0.6,
-            zIndex: -1,
+            opacity: "0.6", // Convert number to string
+            zIndex: "-1",
           },
         },
-        'loop-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
         typing: {
-          '0%': { width: '0%' },
-          '100%': { width: '100%' },
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
         },
         blink: {
-          '0%, 100%': { borderColor: 'transparent' },
-          '50%': { borderColor: 'black' },
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "black" },
         },
 
         fadeInUp: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(20px)',
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
           },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
           },
         },
-      } ,
+      },
       supports: {
         "no-scroll-driven-animations": "not(animation-timeline: scroll())",
       },
-    },    
+    },
   },
   plugins: [],
 };
-
-
 
 export default config;
