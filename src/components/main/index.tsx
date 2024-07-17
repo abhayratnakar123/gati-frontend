@@ -50,78 +50,78 @@ export const Main = () => {
       </div>
       {/* Prodecgt Section  */}
 
-      <div className="flex justify-center items-center flex-col">
-        <p className="font-bold text-6xl opacity-60 text-center mt-20 text-white">
-          Navigate your digital realm efficiently with Athena
-        </p>
-      </div>
-      <div className="flex  justify-center gap-6 mt-12 flex-col p-20 ">
-        <div className="flex gap-2 lg:flex-row sm:flex-col ">
-          <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
-            <h3 className="font-bold text-2xl text-white">
-              Advanced recognition and tracking
-            </h3>
-            <div className="flex justify-center items-center gap-4">
-              <img src="/images/icon1.png" className="h-10"></img>
-              <p className="mt-4 text-white">
-                Seamless interaction and enabling advanced functionalities.
-                Accurately recognize and track user in real time, allowing for
-              </p>
-            </div>
-          </div>
-          <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
-            <h3 className="font-bold text-2xl text-white">
-              Advanced recognition and tracking
-            </h3>
-            <div className="flex justify-center items-center gap-4">
-              <img src="/images/icon1.png" className="h-10 text-white"></img>
-              <p className="mt-4 text-white">
-                Seamless interaction and enabling advanced functionalities.
-                Accurately recognize and track user in real time, allowing for
-              </p>
-            </div>
-          </div>
+      <section>
+        <div className="flex justify-center items-center flex-col">
+          <p className="font-bold text-6xl opacity-60 text-center mt-20 text-white">
+            Navigate your digital realm efficiently with Athena
+          </p>
         </div>
 
-        <div className="flex gap-2 lg:flex-row sm:flex-col ">
-          <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
-            <h3 className="font-bold text-2xl text-white">
-              Advanced recognition and tracking
-            </h3>
-            <div className="flex justify-center items-center gap-4">
-              <img src="/images/icon1.png" className="h-10"></img>
-              <p className="mt-4 text-white">
-                Seamless interaction and enabling advanced functionalities.
-                Accurately recognize and track user in real time, allowing for
-              </p>
+        <div className="flex  justify-center gap-6 mt-12 flex-col lg:p-20 sm:p-[1rem] ">
+          <div className="lg:flex gap-2 lg:flex-row sm:flex-col  ">
+            <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105 sm:mb-[1rem]">
+              <h3 className="font-bold lg:text-2xl text-white">
+                Advanced recognition and tracking
+              </h3>
+              <div className="flex justify-center items-center gap-4">
+                <img src="/images/icon1.png" className="h-10 sm:contents lg:flex "></img>
+                <p className="mt-4 text-white">
+                  Seamless interaction and enabling advanced functionalities.
+                  Accurately recognize and track user in real time, allowing for
+                </p>
+              </div>
+            </div>
+            <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105 sm:mb-[1rem]">
+              <h3 className="font-bold lg:text-2xl text-white">
+              Enhanced user experience
+              </h3>
+              <div className="flex justify-center items-center gap-4">
+                <img src="/images/icon1.png" className="h-10 sm:hidden text-white"></img>
+                <p className="mt-4 text-white">
+                Seamlessly integrate with their daily routines and activities allowing for effortless and intuitive interaction without disrupting the flow of their tasks or experiences
+                </p>
+              </div>
             </div>
           </div>
-          <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
-            <h3 className="font-bold text-2xl text-white">
-              Advanced recognition and tracking
-            </h3>
-            <div className="flex justify-center items-center gap-4">
-              <img src="/images/icon1.png" className="h-10"></img>
-              <p className="mt-4 text-white">
-                Seamless interaction and enabling advanced functionalities.
-                Accurately recognize and track user in real time, allowing for
-              </p>
+
+          <div className="lg:flex gap-2 lg:flex-row sm:flex-col">
+            <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
+              <h3 className="font-bold lg:text-2xl text-white">
+              AR Potential
+              </h3>
+              <div className="flex justify-center items-center gap-4">
+                <img src="/images/icon1.png" className="h-10"></img>
+                <p className="mt-4 text-white">
+                Revolutionizing work and education, our software uniquely blends physical activity with digital tasks using AR technology.
+                </p>
+              </div>
+            </div>
+            <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
+              <h3 className="font-bold lg:text-2xl text-white">
+              Interaction engagement
+              </h3>
+              <div className="flex justify-center items-center gap-4">
+                <img src="/images/icon1.png" className="h-10"></img>
+                <p className="mt-4 text-white">
+                Actively participate and engage with digital content. Users can manipulate virtual objects, perform gestures, or use voice commands to interact
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="mt-10 bg-[#212121]">
         <section className="p-10">
           <div className="text-7xl text-center mt-10 text-white font-light opacity-60">
-          Focusing on Humans and AI
+            Focusing on Humans and AI
           </div>
 
-          <div className="lg:flex lg:flex-row  text-white justify-center sm:flex-col p-10">
+          <div className="lg:flex lg:flex-row  text-white justify-center sm:flex-col sm:justify-center sm:items-center p-10">
             <img src="/images/bimg1.png" alt=""></img>
 
-            <div className="flex w-[50%] flex-col ml-[13rem]">
-              <p className="inline-block text-xl  leading-9">
+            <div className="flex lg:w-[50%] flex-col lg:ml-[13rem] sm:ml-[10rem]">
+              <p className="inline-block text-xl  leading-9 sm ">
                 AI and technology are experiencing rapid growth and expansion,
                 revolutionizing various aspects of our lives. Its capabilities
                 continue to advance, humans are expected to increasingly rely on
@@ -279,7 +279,9 @@ export const Main = () => {
       </div>
 
       <section>
-        <div className="text-6xl text-white text-center mt-20 font-bold opacity-60">Explore</div>
+        <div className="text-6xl text-white text-center mt-20 font-bold opacity-60">
+          Explore
+        </div>
         <div className="h-full w-full pt-12 p-4 mt-10 ">
           <div className="grid gap-14 md:grid-cols-3 md:gap-5">
             <div className="rounded-xl bg-[#212121] p-6 text-center shadow-xl">
@@ -405,42 +407,40 @@ export const Main = () => {
       {/* Text Animation  */}
       <section className="flex flex-col items-center justify-center">
         <div className="animate-make-it-bigger text-white supports-no-scroll-driven-animations:animate-none text-center text-3xl font-bold leading-[1] md:text-[160px] [animation-timeline:\-\-quote] [view-timeline-name:\-\-quote] [animation-range:0%_60%] mt-20">
-        Products
-
+          Products
         </div>
 
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-1 sm:gap-2">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 sm:gap-2 m-10">
           <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-           <ProductCard
+          <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-           <ProductCard
+          <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-           <ProductCard
+          <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-           <ProductCard
+          <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-           <ProductCard
+          <ProductCard
             icon={customSoftwareIcon}
             title="Custom Software Development"
             description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
           />
-         
         </div>
       </section>
     </div>
