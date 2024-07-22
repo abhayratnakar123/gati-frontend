@@ -256,6 +256,7 @@ const AboutUs: React.FC = () => {
                 description={item.description}
                 type={index + 1}
               />
+            
             ))}
 
             {/* <AboutCard/>

@@ -1,6 +1,27 @@
 import React from "react";
 import ProductCard from "../prodect";
 import customSoftwareIcon from "../../../public/images/banner-bg.png";
+import AboutCard from "@/components/Card/AboutCard";
+
+
+const MissionVision = [
+  {
+    title: "Customer Satisfaction",
+    description:
+      "We don’t believe in a transactional approach, when we present our offerings to clients, we assume the role of technology partners that lasts a lifetime. Our offerings are crafted in a manner that holds with customer satisfaction as a priority, backed by seamless communication channels.",
+  },
+  {
+    title: "Gati Way of life",
+    description:
+      "We aim to challenging and motivating our employees to perform above their potential. With an encouraging environment and constructive inputs we drive employees to better themselves while nurturing creativity and revolutionary ideas for a better tomorrow.",
+  },
+
+  {
+    title: "Giving It Back To Society",
+    description:
+      "Extending an offering of Industrial Training to several college students, we give back to the community. While it furnishes students with exposure to niches it also acts as a unique learning curve.",
+  },
+];
 
 export const Main = () => {
   return (
@@ -58,13 +79,13 @@ export const Main = () => {
         </div>
 
         <div className="flex  justify-center gap-6 mt-12 flex-col lg:p-20 sm:p-[1rem] ">
-          <div className="lg:flex gap-2 lg:flex-row sm:flex-col  ">
+          <div className="lg:flex gap-10 lg:flex-row sm:flex-col  ">
             <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105 sm:mb-[1rem]">
               <h3 className="font-bold lg:text-2xl text-white">
                 Advanced recognition and tracking
               </h3>
-              <div className="flex justify-center items-center gap-4">
-                <img src="/images/icon1.png" className="h-10 sm:contents lg:flex "></img>
+              <div className="lg:flex lg:justify-center lg:items-center gap-4 ">
+                {/* <img src="/images/icon1.png" className="h-10 lg:flex sm:hidden "></img> */}
                 <p className="mt-4 text-white">
                   Seamless interaction and enabling advanced functionalities.
                   Accurately recognize and track user in real time, allowing for
@@ -76,7 +97,7 @@ export const Main = () => {
               Enhanced user experience
               </h3>
               <div className="flex justify-center items-center gap-4">
-                <img src="/images/icon1.png" className="h-10 sm:hidden text-white"></img>
+                {/* <img src="/images/icon1.png" className="h-10 sm:hidden text-white"></img> */}
                 <p className="mt-4 text-white">
                 Seamlessly integrate with their daily routines and activities allowing for effortless and intuitive interaction without disrupting the flow of their tasks or experiences
                 </p>
@@ -84,13 +105,13 @@ export const Main = () => {
             </div>
           </div>
 
-          <div className="lg:flex gap-2 lg:flex-row sm:flex-col">
+          <div className="lg:flex gap-10 lg:flex-row sm:flex-col">
             <div className="animate-slide-in-up bg-[#212121] shadow-2xl rounded-lg p-6 h-40 transform transition-transform duration-300 hover:scale-105">
               <h3 className="font-bold lg:text-2xl text-white">
               AR Potential
               </h3>
               <div className="flex justify-center items-center gap-4">
-                <img src="/images/icon1.png" className="h-10"></img>
+                {/* <img src="/images/icon1.png" className="h-10"></img> */}
                 <p className="mt-4 text-white">
                 Revolutionizing work and education, our software uniquely blends physical activity with digital tasks using AR technology.
                 </p>
@@ -101,7 +122,7 @@ export const Main = () => {
               Interaction engagement
               </h3>
               <div className="flex justify-center items-center gap-4">
-                <img src="/images/icon1.png" className="h-10"></img>
+                {/* <img src="/images/icon1.png" className="h-10"></img> */}
                 <p className="mt-4 text-white">
                 Actively participate and engage with digital content. Users can manipulate virtual objects, perform gestures, or use voice commands to interact
                 </p>
@@ -406,41 +427,28 @@ export const Main = () => {
 
       {/* Text Animation  */}
       <section className="flex flex-col items-center justify-center">
-        <div className="animate-make-it-bigger text-white supports-no-scroll-driven-animations:animate-none text-center text-3xl font-bold leading-[1] md:text-[160px] [animation-timeline:\-\-quote] [view-timeline-name:\-\-quote] [animation-range:0%_60%] mt-20">
+        <div className="sm:hidden lg:flex animate-make-it-bigger text-white supports-no-scroll-driven-animations:animate-none text-center text-3xl font-bold leading-[1] md:text-[160px] [animation-timeline:\-\-quote] [view-timeline-name:\-\-quote] [animation-range:0%_60%] mt-20">
           Products
         </div>
 
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 sm:gap-2 m-10">
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
-          <ProductCard
-            icon={customSoftwareIcon}
-            title="Custom Software Development"
-            description="Your vision combined with our code to deliver a bespoke software solution that works just the way you want."
-          />
+        <div className="lg:m-10">
+        <div className="lg:flex lg:flex-row sm:flex-col gap-20 mt-[100px] justify-center mx-28">
+      {MissionVision.map((item, index) => (
+      <AboutCard
+        key={index}
+        title={item.title}
+        description={item.description}
+        type={index + 1}
+      />
+    
+    ))}
+
+    {/* <AboutCard/>
+
+
+  <AboutCard/> */}
+  </div>
+
         </div>
       </section>
     </div>
