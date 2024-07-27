@@ -1,16 +1,45 @@
 import React from 'react';
+import AboutCard from "@/components/Card/AboutCard";
+
+
+const MissionVision = [
+  {
+    title: "Customer Satisfaction",
+    description:
+      "We don’t believe in a transactional approach, when we present our offerings to clients, we assume the role of technology partners that lasts a lifetime. Our offerings are crafted in a manner that holds with customer satisfaction as a priority, backed by seamless communication channels.",
+  },
+  {
+    title: "Gati Way of life",
+    description:
+      "We aim to challenging and motivating our employees to perform above their potential. With an encouraging environment and constructive inputs we drive employees to better themselves while nurturing creativity and revolutionary ideas for a better tomorrow.",
+  },
+
+  {
+    title: "Giving It Back To Society",
+    description:
+      "Extending an offering of Industrial Training to several college students, we give back to the community. While it furnishes students with exposure to niches it also acts as a unique learning curve.",
+  },
+];
+
 
 const ProductCard = ({ icon, title, description }:any) => {
   return (
-    <div className="bg-black h-[60vh] lg:w-[20vw] text-white p-6 rounded-lg shadow-md transform transition-transform hover:scale-105">
-      <div className="flex justify-center mb-4">
-        <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
-          <img src='https://img.freepik.com/free-vector/code-typing-concept-illustration_114360-4296.jpg?t=st=1720610612~exp=1720614212~hmac=6eba37c0762460f56d1618f2fd8155c724610981131331ff6207883025a102d3&w=740' alt={`${title} icon`} className="h-40" />
-        </div>
-      </div>
-      <h3 className="text-xl font-semibold mb-2 text-gray-200">{title}</h3>
-      <p className="text-gray-300">{description}</p>
-    </div>
+    <div className="flex gap-20 mt-[100px] justify-center mx-28">
+    {MissionVision.map((item, index) => (
+      <AboutCard
+        key={index}
+        title={item.title}
+        description={item.description}
+        type={index + 1}
+      />
+    
+    ))}
+
+    {/* <AboutCard/>
+
+
+  <AboutCard/> */}
+  </div>
   );
 };
 

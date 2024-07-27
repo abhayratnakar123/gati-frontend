@@ -92,7 +92,7 @@ export default function Header() {
             Contact us
           </Link>
           <Link
-            href="#"
+            href="/auth/login"
             className={`link    ${pathname === "/auth/login" ? " active" : ""}`}
           >
             Log in <span aria-hidden="true">&rarr;</span>
@@ -162,7 +162,7 @@ export default function Header() {
               </div>
               <div className="py-6 mt-2 mt-color-white">
                 <Link
-                  href="#"
+                  href="/auth/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-[#2b2c68] border-top-white"
                 >
                   Log in
