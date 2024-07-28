@@ -28,7 +28,7 @@ export default function Header() {
     //     display: mobileMenuOpen ? "none" : "",
     //   }}
     // >
-    <header className={`bg-[#09223f] lg:mx-[150px]  sm:mx-[10px] sm:mt-[10px] rounded-[20px] mt-[20px] fixed top-[15px] left-0 right-0 z-[999] ${mobileMenuOpen ? 'hidden' : ''}`}>
+    <header className={` lg:mx-[150px] dark:bg-[#09223f] bg-[#09223f] sm:mx-[10px] sm:mt-[10px] rounded-[20px] mt-[20px] fixed top-[15px] left-0 right-0 z-[999] ${mobileMenuOpen ? 'hidden' : ''}`}>
     {/* <!-- Content here --> */}
   {/* </header> */}
   
@@ -95,7 +95,7 @@ export default function Header() {
             href="/auth/login"
             className={`link    ${pathname === "/auth/login" ? " active" : ""}`}
           >
-            Log in <span aria-hidden="true">&rarr;</span>
+            Log in
           </Link>
         </div>
       </nav>

@@ -4,6 +4,7 @@ import React from "react";
 import { CheckBadgeIcon } from "@heroicons/react/24/outline";
 import ProductCard from "@/components/prodect";
 import AboutCard from "@/components/Card/AboutCard";
+import DefaultLayout from "@/components/Layout/DefaultLayout";
 
 const AboutUs: React.FC = () => {
   const MissionVision = [
@@ -26,6 +27,7 @@ const AboutUs: React.FC = () => {
   ];
   return (
     <>
+    <DefaultLayout>
       <div className="container flex flex-col items-center justify-center bg-primary500   bg-cover bg-no-repeat p-6  md:min-h-50">
         <section className="text-center mt-10">
           <p
@@ -484,6 +486,7 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </section> */}
+      </DefaultLayout>
     </>
   );
 };
