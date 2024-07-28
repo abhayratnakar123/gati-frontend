@@ -1,9 +1,11 @@
 "use client";
+import DefaultLayout from "@/components/Layout/DefaultLayout";
 import React, { useState } from "react";
 
 function Page() {
   const [index, setIndex] = useState<number>(0);
   return (
+    <DefaultLayout>
     <div className="  p-10">
       <div className="product">
         <div className="text-content text-white font-sans mt-[80px] mb-[100px] ">
@@ -25,7 +27,7 @@ function Page() {
           </div>
         </div>
       </div>
-      <iframe
+      {/* <iframe
         width="560"
         height="315"
         src="https://www.youtube.com/embed/GtV99EUKMLM?si=jnWY0c3wRHYl5ihq"
@@ -35,10 +37,10 @@ function Page() {
         // referrerpolicy="strict-origin-when-cross-origin"
         // allowfullscreen
         
-      ></iframe>
+      ></iframe> */}
 
       {/* tab */}
-      <div className=" text-white flex   justify-center items-center ">
+      {/* <div className=" text-white flex   justify-center items-center ">
         <div className="bg-gray-200 flex p-1 rounded-lg gap-x-3 ">
           <div
             className={`${
@@ -61,7 +63,7 @@ function Page() {
             For my organization
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* //section -2 */}
       <div className="flex lg:flex-row items-center justify-center flex-col mt-10 gap-16 mb-10">
@@ -216,6 +218,7 @@ function Page() {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 }
 

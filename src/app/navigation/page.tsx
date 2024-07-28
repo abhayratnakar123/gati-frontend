@@ -1,8 +1,9 @@
+import DefaultLayout from '@/components/Layout/DefaultLayout'
 import React from 'react'
 
 function page() {
   return (
-    <div>Navigation</div>
+    <DefaultLayout>Navigation</DefaultLayout>
   )
 }
 

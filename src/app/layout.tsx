@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import CustomCursor from "@/components/cursor";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <div className="mt-20">
         {children}
-        </div>
-        <Footer/>
-        {/* <CustomCursor/> */}
       </body>
     </html>
   );
